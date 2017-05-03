@@ -4,7 +4,13 @@ module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname),
+    publicPath: "/",
     filename: 'bundle.js'
+  },
+  resolve:{
+    alias: {
+      '@': path.resolve(__dirname)
+    }
   },
   module: {
     loaders: [

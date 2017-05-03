@@ -4,17 +4,21 @@
   "description": "",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/webpack-dev-server --hot"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "mustache-loader": "^0.4.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "mustache-loader": "^0.4.1",
     "node-sass": "^4.5.2",
     "postcss-loader": "^1.3.3",
-    "sass-loader": "^6.0.3"
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.4.1"
   }
 }
