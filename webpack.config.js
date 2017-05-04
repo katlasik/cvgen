@@ -33,6 +33,12 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },{
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader?name=js/fonts/[name].[ext]"
+     },{
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader"
       }
     ]
   }
