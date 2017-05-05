@@ -1,0 +1,52 @@
+name: Krzysztof Atłasik
+birthdate: 04.02.1988
+title: Programista fullstack
+contact:
+  phone: +48 514 877 107
+  skype: krzysztof_atlasik
+  mail: krzysztof.atlasik@protonmail.com
+education:
+ - period:
+     from: 01.9.2005
+     to: 01.06.2007
+   school: VII Liceum Ogólnokształcące im. Mikołaja Kopernika w Częstochowie
+ - period:
+     from: 01.9.2007
+     to: 01.02.2010
+   school: Politechnika Śląska w Gliwicach
+   description: >
+                 Studia inżynierskie na kierunku Elektronika i Telekomunikacja
+ - period:
+     from: 01.3.2010
+     to: 01.09.2012
+   school: Politechnika Śląska w Gliwicach
+   description: >
+                 Studia magisterskie na kierunku Elektronika i Telekomunikacja
+                 na specjalizacji Aparatura Elektroniczna
+experience:
+ - period:
+     from: 01.12.2011
+     to: 31.08.2012
+   company: LGBS Polska
+   position: Programista Java
+   description: >
+                 Podczas pracy dla LGBS polska uczestniczyłem w projektcie
+                 wykorzystującym technologię GWT.
+ - period:
+     from: 01.09.2012
+     to: 30.06.2016
+   company: ISO Software Polska Polska
+   position: Programista Java
+   description: blablabla
+ - period:
+     from: 01.07.2016
+   company: Intive Polska
+   position: Programista Java
+   description: blablabla
+language:
+  - name: angielski
+    description: >
+                  biegła znajomość, doświadczenie w współpracy
+                  w anglojęzycznych zespołach
+  - name: niemiecki
+    description: komunikatywny, brak doświadczenia

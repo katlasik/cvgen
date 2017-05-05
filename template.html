@@ -1,163 +1,142 @@
-<div class="container">
-  <div class="sidebar">
-    <div class="header">
-      <img src="/images/mugshot.jpg"></img>
-    </div>
+<div class="page">
+  <div class="container">
+
     <div class="sidebar">
-      <div class="section">
-        <div class="title">
-          <div>Informacje</div>
-          <div class="title-rule">
-            <hr></hr>
-          </div>
-        </div>
-        <div class="content">
-          <div class="item">
-            <div>
-              <div class="item-title">Imię i nazwisko</div>
-              <div>Krzysztof Atłasik</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>
-              <div class="item-title">Data urodzenia</div>
-              <div>4 luty 1988</div>
-            </div>
-          </div>
-        </div>
+
+      <div class="sidebar-header">
+        <img src="{{mugshot}}"></img>
       </div>
-      <div class="section">
-        <div class="title">
-          <div>Dane kontaktowe</div>
-          <div class="title-rule">
-            <hr></hr>
+
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">
+            <div>{{messages.info}}</div>
+            <div class="sidebar-title-rule">
+              <hr></hr>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="item-title">{{messages.names}}</div>
+              <div>{{data.name}}</div>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <div class="item-title">{{messages.birthdate}}</div>
+              <div>{{#formatDate data.birthdate}}{{/formatDate}}</div>
+            </div>
           </div>
         </div>
-        <div class="item">
-          <div class="item-icon"><i class="fa fa-skype"></i></div>
-          <div>
-            <div class="item-title">Skype</div>
-            <div>krzysztof_atlasik</div>
+
+        <div class="spacer"></div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">
+            <div>{{messages.contact}}</div>
+            <div class="sidebar-title-rule">
+              <hr></hr>
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="item-icon"><i class="fa fa-phone"></i></div>
-          <div>
-            <div class="item-title">Telefon</div>
-            <div>+48 514 877 107</div>
+          <div class="item">
+            <div class="item-icon"><i class="fa fa-phone"></i></div>
+            <div>
+              <div class="item-title">{{messages.phone}}</div>
+              <div class="item-value">{{data.contact.phone}}</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-icon"><i class="fa fa-envelope"></i></div>
+            <div>
+              <div class="item-title">{{messages.mail}}</div>
+              <div class="item-value">{{data.contact.mail}}</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-icon"><i class="fa fa-skype"></i></div>
+            <div>
+              <div class="item-title">{{messages.skype}}</div>
+              <div class="item-value">{{data.contact.skype}}</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="content">
+      <header class="header">
+        <div>
+          <h1 class="title">{{data.name}}</h1>
+          <h2 class="subtitle">{{data.title}}</h2>
+        </div>
+      </header>
 
-  </div>
+      <div class="spacer"></div>
 
-
-
-
-  <div class="content">
-    <header class="header">
-      <div>
-        <h1 class="title">Joe Doe</h1>
-        <h2 class="subtitle">Fullstack Developer</h2>
-      </div>
-    </header>
-
-    <div class="spacer"> </div>
-
-    <article class="section">
-      <h3 class="title">Doświadczenie zawodowe</h3>
-      <hr></hr>
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">
-             2011 - 2012
-          </div>
-          <div class="list-content">
-            <div class="list-description">LGBS Polska</div>
-            <div class="list-subtitle">Programista Java</div>
-            <div class="list-text">
-              Podczas pracy dla LGBS polska uczestniczyłem w projektcie
-              wykorzystującym technologię GWT.
+      <article class="section">
+        <h3 class="section-title">{{messages.experience}}</h3>
+        <hr></hr>
+        <div class="list">
+          {{#each data.experience}}
+          <div class="list-item">
+            <div class="list-title">
+               <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
+               {{#if this.period.to}}
+               <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
+               {{/if}}
+            </div>
+            <div class="list-content">
+              <div class="list-description">{{this.company}}</div>
+              <div class="list-subtitle">{{this.position}}</div>
+              <div class="list-text">{{this.description}}</div>
             </div>
           </div>
+          {{/each}}
         </div>
-        <div class="list-item">
-          <div class="list-title">
-             2012 - 2016
-          </div>
-          <div class="list-content">
-            <div class="list-description">ISO Software Systems Polska</div>
-            <div class="list-subtitle">Programista Java</div>
-          </div>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <div class="spacer"> </div>
+      <div class="spacer"></div>
 
-    <article class="section">
-      <h3 class="title">Edukacja</h3>
-      <hr></hr>
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">
-             2005 - 2007
-          </div>
-          <div class="list-content">
-            <div class="list-description">
-              XII Liceum ogólnokształcące im. Mikołaja Kopernika w Częstochowie
+      <article class="section">
+        <h3 class="section-title">{{messages.education}}</h3>
+        <hr></hr>
+        <div class="list">
+          {{#each data.education}}
+          <div class="list-item">
+            <div class="list-title">
+              <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
+              {{#if this.period.to}}
+              <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
+              {{/if}}
+            </div>
+            <div class="list-content">
+              <div class="list-description">{{this.school}}</div>
+              <div class="list-subtitle">{{this.description}}</div>
             </div>
           </div>
+          {{/each}}
         </div>
-        <div class="list-item">
-          <div class="list-title">
-             2007 - 2010
-          </div>
-          <div class="list-content">
-            <div class="list-description">
-            Politechnika Śląska w Gliwicach
-            </div>
-            <div class="list-subtitle">Studia inżynierskie na kierunku Elektronika i Telekomunikacja</div>
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="list-title">
-             2007 - 2012
-          </div>
-          <div class="list-content">
-            <div class="list-description">
-            Politechnika Śląska
-            </div>
-            <div class="list-subtitle">
-              Studia inżynierskie
+      </article>
+
+      <div class="spacer"></div>
+
+      <article class="section">
+        <h3 class="section-title">{{messages.languages}}</h3>
+        <hr></hr>
+        <div class="list">
+          {{#each data.language}}
+          <div class="list-item">
+            <div class="list-title">{{this.name}}</div>
+            <div class="list-content">
+                <div class="list-subtitle">{{this.description}}</div>
             </div>
           </div>
+          {{/each}}
         </div>
-      </div>
-    </article>
+      </article>
 
-    <div class="spacer"> </div>
+      <div class="spacer"></div>
 
-    <article class="section">
-      <h3 class="title">Języki obce</h3>
-      <hr></hr>
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">język angielski</div>
-          <div class="list-content">
-            biegła znajomość, doświadczenie w współpracy w anglojęzycznych zespołach
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="list-title">język niemiecki</div>
-          <div class="list-content">
-            Hogwart
-          </div>
-        </div>
-      </div>
-    </article>
-
+    </div>
   </div>
 </div>

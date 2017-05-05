@@ -1,8 +1,19 @@
 $main-color: #4C505B;
 
+.page{
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+}
+
 @font-face {
     font-family: 'OpenSans';
     src: url('/fonts/OpenSans-Regular.ttf')  format('truetype');
+}
+
+html {
+  font-size: 13px;
 }
 
 main {
@@ -16,20 +27,20 @@ main {
   }
 
   .spacer{
-    height: 25px;
+    height: 0.5rem;
   }
 
   .content{
-    flex: 3;
+    flex: 2;
 
     .section {
-      margin: 40px 20px;
+      margin: 1rem;
 
-      .title {
+      .section-title {
         text-transform: uppercase;
         font-size: 1rem;
-        margin-left: 20px;
-        letter-spacing: 1.5px;
+        margin-left: 1.5rem;
+        letter-spacing: 0.15rem;
       }
     }
   }
@@ -39,39 +50,47 @@ main {
     flex: 1;
     background-color: $main-color;
 
-    .header{
+    .sidebar-header{
+      margin: 3rem 0;
+      display: flex;
+      justify-content: center;
+
       img {
         width: auto;
-        height: 150px;
+        height: 12rem;
         filter: grayscale(100%);
       }
     }
 
     .item{
-      margin: 20px 0 20px 35px;
+      margin: 1rem 0 1rem 1.5rem;
       display: flex;
 
       .item-icon{
         font-size: 2rem;
-        margin-right: 15px;
+        margin-right: 1rem;
       }
 
       .item-title{
         font-weight: bold;
       }
+
+      .item-value{
+        font-size: 0.9rem;
+      }
     }
 
-    .title {
-      margin-left: 20px;
+    .sidebar-title {
+      margin-left: 1rem;
       font-variant: small-caps;
       font-weight: bold;
       display: flex;
       font-size: 1.5rem;
       white-space: nowrap;
 
-      &-rule {
+      .sidebar-title-rule {
         width: 100%;
-        margin-left: 10px;
+        margin-left: 0.5rem;
         padding-top: 0.5rem;
       }
     }
@@ -79,7 +98,7 @@ main {
   }
 
   .header {
-    margin: 40px 0;
+    margin: 3rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,13 +108,13 @@ main {
       font-size: 3rem;
       text-transform: uppercase;
       font-weight: bold;
-      letter-spacing: 3px;
+      letter-spacing: 0.3rem;
     }
 
     .subtitle{
       margin: 0;
       font-variant: small-caps;
-      letter-spacing: 3px;
+      letter-spacing: 0.2rem;
       font-size: 1.2rem;
       font-weight: normal;
     }
@@ -105,16 +124,17 @@ main {
   .list {
     .list-item{
       display: flex;
-      margin: 5px 0;
+      margin: 0.8rem 0;
 
       .list-title{
         flex: 1;
         text-align: right;
-        margin-right: 20px;
+        margin-right: 1rem;
       }
 
       .list-content{
-        flex: 5;
+        flex: 4;
+        padding-right: 2rem;
       }
 
       .list-description{
@@ -122,6 +142,7 @@ main {
       }
 
       .list-subtitle{
+        font-size: 0.9rem;
         font-style: italic;
       }
 
