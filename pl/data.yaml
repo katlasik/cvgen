@@ -1,6 +1,11 @@
 name: Krzysztof Atłasik
 birthdate: 04.02.1988
 title: Programista fullstack
+hobby: >
+        Lubię aktywnie spedzać czas podczas jazdy na rowerze, biegania,
+        wędrówek po górach czy wpinaczki. Gdy mam chwilę by spotkać się ze
+        znajomymi chętnię gram w gry planszowe.
+skills: >
 contact:
   phone: +48 514 877 107
   skype: krzysztof_atlasik
@@ -30,19 +35,26 @@ experience:
    company: LGBS Polska
    position: Programista Java
    description: >
-                 Podczas pracy dla LGBS polska uczestniczyłem w projektcie
-                 wykorzystującym technologię GWT.
+                 Podczas pracy dla LGBS polska uczestniczyłem w projekcie
+                 wykorzystującym Spring Framework oraz technologię GWT.
  - period:
      from: 01.09.2012
      to: 30.06.2016
    company: ISO Software Polska Polska
-   position: Programista Java
-   description: blablabla
+   position: Programista Java i Javascript
+   description: >
+                  Podczas mojej pracy w ISO Software uczestniczyłem
+                  w projektach wykorzystyjących Spring Framework lub Grails.
+                  Jako główna technologia frontendowa wykorzystywany był Angular.
+                  Brałem także udział w projekcie opartych na PHP.
  - period:
      from: 01.07.2016
    company: Intive Polska
-   position: Programista Java
-   description: blablabla
+   position: Programista Java i Javascript
+   description: >
+                 Podczas pracy w Intive uczesniczyłem w projektach opartych na
+                 Spring Framework i Liferay Portal. Jako technologie frontendowe
+                 wykorzystywane były Vuejs oraz Angular.
 language:
   - name: angielski
     description: >

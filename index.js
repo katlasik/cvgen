@@ -3,7 +3,7 @@ import template from '@/template.html'
 import main from '@/styles/main.scss'
 import fontAwesome from "font-awesome-webpack"
 import mugshot from "@/images/mugshot.jpg"
-import data from "@/data.yaml"
+
 import openSans from "@/fonts/OpenSans-Regular.ttf"
 import moment from "moment"
 import Handlebars from "handlebars"
@@ -11,7 +11,8 @@ import Handlebars from "handlebars"
 
 const locale = getParameter("lang") || "pl"
 
-const messages = require(`@/messages_${locale}.yaml`)
+const data = require(`@/${locale}/data.yaml`)
+const messages = require(`@/${locale}/messages.yaml`)
 
 moment.locale(locale)
 
