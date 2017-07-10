@@ -1,0 +1,63 @@
+<div class="sidebar">
+
+    <div class="sidebar-header">
+    {{# if show_mugshot}}
+    <img src="{{mugshot}}"></img>
+    {{/if}}
+    </div>
+
+    <div class="sidebar">
+    <div class="sidebar-section">
+        <div class="sidebar-title">
+        <div>{{messages.info}}</div>
+        <div class="sidebar-title-rule">
+            <hr></hr>
+        </div>
+        </div>
+        <div class="item">
+        <div>
+            <div class="item-title">{{messages.names}}</div>
+            <div>{{data.name}}</div>
+        </div>
+        </div>
+        <div class="item">
+        <div>
+            <div class="item-title">{{messages.birthdate}}</div>
+            <div>{{#formatDate data.birthdate}}{{/formatDate}}</div>
+        </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="sidebar-section">
+        <div class="sidebar-title">
+        <div>{{messages.contact}}</div>
+        <div class="sidebar-title-rule">
+            <hr></hr>
+        </div>
+        </div>
+        <div class="item">
+        <div class="item-icon"><i class="fa fa-phone"></i></div>
+        <div>
+            <div class="item-title">{{messages.phone}}</div>
+            <div class="item-value">{{data.contact.phone}}</div>
+        </div>
+        </div>
+        <div class="item">
+        <div class="item-icon"><i class="fa fa-envelope"></i></div>
+        <div>
+            <div class="item-title">{{messages.mail}}</div>
+            <div class="item-value">{{data.contact.mail}}</div>
+        </div>
+        </div>
+        <div class="item">
+        <div class="item-icon"><i class="fa fa-skype"></i></div>
+        <div>
+            <div class="item-title">{{messages.skype}}</div>
+            <div class="item-value">{{data.contact.skype}}</div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

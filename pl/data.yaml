@@ -5,7 +5,28 @@ hobby: >
         Lubię aktywnie spedzać czas podczas jazdy na rowerze, biegania,
         wędrówek po górach czy wpinaczki. Gdy mam chwilę by spotkać się ze
         znajomymi chętnię gram w gry planszowe.
-skills: >
+skills: 
+       - name: Java 
+         level: 8
+         description: Java jest językiem, w którym mam największe doświadczenie.
+       - name: Scala
+         level: 5
+       - name: Groovy
+         level: 5
+         description: Drugim językiem, którego zacząłem się uczyć na platformę JVM 
+       - name: Kotlin
+         level: 4
+       - name: Spring Framework
+         level: 6
+       - name: CSS i HTML
+         level: 6
+       - name: JavaScript
+         level: 6
+       - name: Postgres
+         level: 4
+         description: W swojej karierze miałem okazję parokrotnie pracować z bazą danych Postres. 
+       - name: Oracle
+         level: 4
 contact:
   phone: +48 514 877 107
   skype: krzysztof_atlasik
@@ -61,4 +82,4 @@ language:
                   biegła znajomość, doświadczenie w współpracy
                   w anglojęzycznych zespołach
   - name: niemiecki
-    description: komunikatywny, brak doświadczenia
+    description: komunikatywny

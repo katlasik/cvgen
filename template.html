@@ -1,67 +1,6 @@
 <div class="page">
   <div class="container">
-
-    <div class="sidebar">
-
-      <div class="sidebar-header">
-        <img src="{{mugshot}}"></img>
-      </div>
-
-      <div class="sidebar">
-        <div class="sidebar-section">
-          <div class="sidebar-title">
-            <div>{{messages.info}}</div>
-            <div class="sidebar-title-rule">
-              <hr></hr>
-            </div>
-          </div>
-          <div class="item">
-            <div>
-              <div class="item-title">{{messages.names}}</div>
-              <div>{{data.name}}</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>
-              <div class="item-title">{{messages.birthdate}}</div>
-              <div>{{#formatDate data.birthdate}}{{/formatDate}}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="spacer"></div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-title">
-            <div>{{messages.contact}}</div>
-            <div class="sidebar-title-rule">
-              <hr></hr>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-icon"><i class="fa fa-phone"></i></div>
-            <div>
-              <div class="item-title">{{messages.phone}}</div>
-              <div class="item-value">{{data.contact.phone}}</div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-icon"><i class="fa fa-envelope"></i></div>
-            <div>
-              <div class="item-title">{{messages.mail}}</div>
-              <div class="item-value">{{data.contact.mail}}</div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-icon"><i class="fa fa-skype"></i></div>
-            <div>
-              <div class="item-title">{{messages.skype}}</div>
-              <div class="item-value">{{data.contact.skype}}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  {{>sidebar show_mugshot=true}}
 
     <div class="content">
       <header class="header">
@@ -118,6 +57,44 @@
         </div>
       </article>
 
+      <footer>{{messages.agreement}}</footer>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+  {{>sidebar show_mugshot=false}}
+   <div class="content">
+     <div class="spacer"></div>
+     <article class="section">
+        <h3 class="section-title">{{messages.skills}}</h3>
+        <hr></hr>
+        <div class="list">
+            {{#each data.skills}}
+            <div class="list-item">
+              <div class="list-title">{{this.name}}</div>
+              <div class="list-content">
+                 <div class="list-rating">
+                    {{#rating this.level}}{{/rating}}
+                  </div>
+                 <div class="list-subtitle">{{this.description}}</div>
+              </div>
+            </div>
+            {{/each}}
+        </div>
+      </article>
+
+      <div class="spacer"></div>
+
+      <article class="section">
+        <h3 class="section-title">{{messages.hobby}}</h3>
+        <hr></hr>
+        <div class="list">
+          <div class="list-item">{{data.hobby}}</div>
+        </div>
+      </article>
+
       <div class="spacer"></div>
 
       <article class="section">
@@ -134,25 +111,7 @@
           {{/each}}
         </div>
       </article>
-
-      <div class="spacer"></div>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.skills}}</h3>
-        <hr></hr>
-        <div class="list">
-          <div class="list-item">{{data.skill}}</div>
-        </div>
-      </article>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.hobby}}</h3>
-        <hr></hr>
-        <div class="list">
-          <div class="list-item">{{data.hobby}}</div>
-        </div>
-      </article>
       <footer>{{messages.agreement}}</footer>
-    </div>
+   </div>
   </div>
 </div>
