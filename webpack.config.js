@@ -1,6 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const WebpackOnBuildPlugin = require('on-build-webpack')
+const pdf = require('phantom-html2pdf');
+
 
 const isProd = process.argv.indexOf('-p') !== -1;
 
@@ -13,20 +17,43 @@ const sassProd = {
 }
 
 const sassDev =   {
-    test: /\.scss$/,
-    loaders: [
-      'style-loader',
-      'css-loader',
-      'sass-loader'
-    ]
-  }
+  test: /\.scss$/,
+  loaders: [
+    'style-loader',
+    'css-loader',
+    'sass-loader'
+  ]
+}
+
+const plugins = [new HtmlWebpackPlugin(),
+    new ExtractTextPlugin("css/[name].css")]
+
+if (isProd) {
+    plugins.push(new PrerenderSpaPlugin(
+      path.resolve(__dirname, 'static'),
+      ['/'],
+      { captureAfterTime: 5000 }
+    ))
+
+
+     plugins.push(new WebpackOnBuildPlugin(function() {
+        const options = {
+   	   html: "static/index.html"
+     }
+
+	pdf.convert(options, function(err, result) {
+           result.toFile("pdf/cv.pdf", function() {})
+	})
+    }))
+	
+} 
 
 const sassLoader = isProd ? sassProd : sassDev
 
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "static"),
     publicPath: "",
     filename: 'bundle.js'
   },
@@ -41,15 +68,20 @@ module.exports = {
       'hbs': 'handlebars-loader'
     }
   },
-  plugins: [
-    new HtmlWebpackPlugin(),
-    new ExtractTextPlugin("css/[name].css")
-  ],
+  plugins: plugins,
   node: {
     fs: "empty"
   },
   module: {
     loaders: [
+     {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      },
       {
         test: /\.yaml$/,
         loaders: [

@@ -53,6 +53,6 @@ const model = {
   messages
 }
 
-const main = document.createElement("main")
-main.innerHTML = template(model)
-document.querySelector("body").appendChild(main)
+const mainEl = document.createElement("main")
+mainEl.innerHTML = template(model)
+document.querySelector("body").appendChild(mainEl)

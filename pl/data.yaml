@@ -8,25 +8,29 @@ hobby: >
 skills: 
        - name: Java 
          level: 8
-         description: Java jest językiem, w którym mam największe doświadczenie.
+         description: Java jest językiem, w którym mam największe doświadczenie. Brałem udział w paru projektach
        - name: Scala
          level: 5
        - name: Groovy
          level: 5
-         description: Drugim językiem, którego zacząłem się uczyć na platformę JVM 
+         description: Drugim językiem, którego zacząłem się uczyć na platformę JVM. Mam za sobą jeden komercyjny projekt, który używał frameworku Grails. Spędziełem też sporo czasu.
        - name: Kotlin
          level: 4
+         description: Ostatnim językiem z rodziny Java
        - name: Spring Framework
          level: 6
        - name: CSS i HTML
          level: 6
+         description: W związku z tym, że większość projektów w których brałem udział, to były projekty Webowe
        - name: JavaScript
          level: 6
        - name: Postgres
          level: 4
-         description: W swojej karierze miałem okazję parokrotnie pracować z bazą danych Postres. 
+         description: Miałem okazję parokrotnie pracować z bazą danych Postres podczas projektów w których brałem udział. Posiadam solidne podstawy 
        - name: Oracle
          level: 4
+	 description: Moją znajomość baz Oracle określiłbym podbnie jak Postgres - miałem z nią parokrotnie kontakt w czasie gdy uczestniczyłem w projektach. 
+       
 contact:
   phone: +48 514 877 107
   skype: krzysztof_atlasik

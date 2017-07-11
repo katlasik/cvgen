@@ -1,11 +1,5 @@
 $main-color: #4C505B;
 
-.page{
-  width: 21cm;
-  height: 29.7cm;
-  display: block;
-  margin: 0.8rem auto;
-}
 
 @font-face {
     font-family: 'OpenSans';
@@ -14,6 +8,14 @@ $main-color: #4C505B;
 
 html {
   font-size: 13px;
+}
+
+.page{
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0.8rem auto;
+  page-break-after: always;
 }
 
 main {
