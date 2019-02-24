@@ -41,21 +41,28 @@
         <div class="item-icon"><i class="fa fa-phone"></i></div>
         <div>
             <div class="item-title">{{messages.phone}}</div>
-            <div class="item-value">{{data.contact.phone}}</div>
+            <div class="item-value"><a href="tel:{{data.contact.phone}}">{{data.contact.phone}}</a></div>
         </div>
         </div>
         <div class="item">
         <div class="item-icon"><i class="fa fa-envelope"></i></div>
         <div>
             <div class="item-title">{{messages.mail}}</div>
-            <div class="item-value">{{data.contact.mail}}</div>
+            <div class="item-value"><a href="mailto:{{data.contact.mail}}">{{data.contact.mail}}</a></div>
         </div>
         </div>
         <div class="item">
         <div class="item-icon"><i class="fa fa-skype"></i></div>
         <div>
             <div class="item-title">{{messages.skype}}</div>
-            <div class="item-value">{{data.contact.skype}}</div>
+            <div class="item-value"><a href="skype:{{data.contact.skype}}">{{data.contact.skype}}</a></div>
+        </div>
+        </div>
+        <div class="item">
+        <div class="item-icon"><i class="fa fa-linkedin"></i></div>
+        <div>
+            <div class="item-title">{{messages.linkedin}}</div>
+            <div class="item-value"><a href="{{data.contact.linkedin}}">{{data.contact.linkedin}}</a></div>
         </div>
         </div>
     </div>

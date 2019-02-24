@@ -41,7 +41,7 @@ Handlebars.registerHelper('times', function(n, block) {
 
 Handlebars.registerHelper('rating', function(n) {
     return range(conf.maximum_rating).map(i =>
-      (i <= n) ? "<i class='fa fa-star'></i>" : "<i class='fa fa-star-o'></i>"
+      (i < n) ? "<i class='fa fa-star'></i>" : "<i class='fa fa-star-o'></i>"
     ).join(" ")
 })
 

@@ -25,8 +25,12 @@ const sassDev =   {
   ]
 }
 
-const plugins = [new HtmlWebpackPlugin(),
-    new ExtractTextPlugin("css/[name].css")]
+const plugins = [
+    new HtmlWebpackPlugin({
+   	title: "Resume"
+    }),
+    new ExtractTextPlugin("css/[name].css")
+]
 
 if (isProd) {
     plugins.push(new PrerenderSpaPlugin(
