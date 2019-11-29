@@ -1,121 +1,160 @@
 <div class="page">
-  <div class="container">
-  {{>sidebar show_mugshot=true}}
+    <div class="container">
+        {{>sidebar show_mugshot=true}}
 
-    <div class="content">
-      <header class="header">
-        <div>
-          <h1 class="title">{{data.name}}</h1>
-          <h2 class="subtitle">{{data.title}}</h2>
+        <div class="content">
+            <header class="header">
+                <div>
+                    <h1 class="title">{{data.name}}</h1>
+                    <h2 class="subtitle">{{data.title}}</h2>
+                </div>
+            </header>
+
+            <div class="spacer"></div>
+
+            <article class="section">
+                <h3 class="section-title">{{messages.experience}}</h3>
+                <hr></hr>
+                <div class="list">
+                    {{#each data.experience}}
+                    <div class="list-item">
+                        <div class="list-title">
+                            <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
+                            {{#if this.period.to}}
+                            <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
+                            {{/if}}
+                        </div>
+                        <div class="list-content">
+                            <div class="list-description">{{this.company}}</div>
+                            <div class="list-subtitle">{{this.position}}</div>
+                            <div class="list-text">{{this.description}}</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </article>
+
+            <div class="spacer"></div>
+
+            <article class="section">
+                <h3 class="section-title">{{messages.education}}</h3>
+                <hr></hr>
+                <div class="list">
+                    {{#each data.education}}
+                    <div class="list-item">
+                        <div class="list-title">
+                            <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
+                            {{#if this.period.to}}
+                            <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
+                            {{/if}}
+                        </div>
+                        <div class="list-content">
+                            <div class="list-description">{{this.school}}</div>
+                            <div class="list-subtitle">{{this.description}}</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </article>
+
+            <div class="spacer"></div>
+
+            <article class="section">
+                <h3 class="section-title">{{messages.hobby}}</h3>
+                <hr></hr>
+                <div class="list">
+                    <div class="list-item">{{data.hobby}}</div>
+                </div>
+            </article>
+
+            <div class="spacer"></div>
+
+            <article class="section">
+                <h3 class="section-title">{{messages.languages}}</h3>
+                <hr></hr>
+                <div class="list">
+                    {{#each data.language}}
+                    <div class="list-item">
+                        <div class="list-title">{{this.name}}</div>
+                        <div class="list-content">
+                            <div class="list-subtitle">{{this.description}}</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </article>
+
+            <footer>{{messages.agreement}}</footer>
         </div>
-      </header>
-
-      <div class="spacer"></div>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.experience}}</h3>
-        <hr></hr>
-        <div class="list">
-          {{#each data.experience}}
-          <div class="list-item">
-            <div class="list-title">
-               <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
-               {{#if this.period.to}}
-               <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
-               {{/if}}
-            </div>
-            <div class="list-content">
-              <div class="list-description">{{this.company}}</div>
-              <div class="list-subtitle">{{this.position}}</div>
-              <div class="list-text">{{this.description}}</div>
-            </div>
-          </div>
-          {{/each}}
-        </div>
-      </article>
-
-      <div class="spacer"></div>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.education}}</h3>
-        <hr></hr>
-        <div class="list">
-          {{#each data.education}}
-          <div class="list-item">
-            <div class="list-title">
-              <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
-              {{#if this.period.to}}
-              <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
-              {{/if}}
-            </div>
-            <div class="list-content">
-              <div class="list-description">{{this.school}}</div>
-              <div class="list-subtitle">{{this.description}}</div>
-            </div>
-          </div>
-          {{/each}}
-        </div>
-      </article>
-
-      <div class="spacer"></div>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.hobby}}</h3>
-        <hr></hr>
-        <div class="list">
-          <div class="list-item">{{data.hobby}}</div>
-        </div>
-      </article>
-
-      <footer>{{messages.agreement}}</footer>
     </div>
-  </div>
 </div>
 
 <div class="page">
-  <div class="container">
-  {{>sidebar show_mugshot=false}}
-   <div class="content">
-     <div class="spacer"></div>
-     <article class="section">
-        <h3 class="section-title">{{messages.skills}}</h3>
-        <hr></hr>
-        <div class="list">
-            {{#each data.abilities}}
-               <h4 class="list-heading">{{this.category}}</h4>
-               {{#each this.skills}}
-               <div class="list-item">
-                 <div class="list-title">{{this.name}}</div>
-                 <div class="list-content">
-                    <div class="list-rating">
-                       {{#rating this.level}}{{/rating}}
-                     </div>
-                    <div class="list-subtitle">{{this.description}}</div>
-                 </div>
-               </div>
-               {{/each}}
-            {{/each}}
+    <div class="container">
+        {{>sidebar show_mugshot=false}}
+        <div class="content">
+            <div class="spacer"></div>
+            <article class="section">
+                <h3 class="section-title">{{messages.skills}}</h3>
+                <hr>
+                <div class="list">
+                    {{#each data.abilities}}
+                    <h4 class="list-heading">{{this.category}}</h4>
+                    {{#each this.skills}}
+                    <div class="list-item">
+                        <div class="list-title">{{this.name}}</div>
+                        <div class="list-content">
+                            <div class="list-rating">
+                                {{#rating this.level this.loved}}{{/rating}}
+                            </div>
+                            <div class="list-subtitle">{{this.description}}</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </article>
+
+            <article class="section">
+                <div class="list">
+                    <h4 class="list-heading">Legenda</h4>
+                    <div class="list-item reversed">
+                        <div class="list-content">
+                            <div class="list-rating">
+                                {{#rating 3}}{{/rating}}
+                            </div>
+                        </div>
+                        <div class="list-title">Biegła znajomość i sporo doświadczenia</div>
+                    </div>
+                    <div class="list-item reversed">
+                        <div class="list-content">
+                            <div class="list-rating">
+                                {{#rating 2}}{{/rating}}
+                            </div>
+                        </div>
+                        <div class="list-title">Czuję się kompetentny</div>
+                    </div>
+                    <div class="list-item reversed">
+                        <div class="list-content">
+                            <div class="list-rating">
+                                {{#rating 1}}{{/rating}}
+                            </div>
+                        </div>
+                        <div class="list-title">Miałem okazję użyć i/lub dopiero się uczę</div>
+                    </div>
+                    <div class="list-item reversed">
+                        <div class="list-content">
+                            <div class="list-rating">
+                                <i class='fa fa-heart'></i>
+                            </div>
+                        </div>
+                        <div class="list-title">Chciałbym pracować i rozwijać się w tej technologii</div>
+                    </div>
+                </div>
+
+            </article>
+
+            <footer>{{messages.agreement}}</footer>
         </div>
-      </article>
-
-      <div class="spacer"></div>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.languages}}</h3>
-        <hr></hr>
-        <div class="list">
-          {{#each data.language}}
-          <div class="list-item">
-            <div class="list-title">{{this.name}}</div>
-            <div class="list-content">
-                <div class="list-subtitle">{{this.description}}</div>
-            </div>
-          </div>
-          {{/each}}
-        </div>
-      </article>
-
-      <footer>{{messages.agreement}}</footer>
-   </div>
-  </div>
+    </div>
 </div>

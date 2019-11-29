@@ -138,6 +138,19 @@ main {
       display: flex;
       margin: 0.8rem 0;
 
+      &.reversed {
+
+        .list-title{
+          text-align: left;
+          flex: 2
+        }
+
+        .list-content {
+          text-align: right;
+        }
+
+      }
+
       .list-title{
         flex: 1;
         text-align: right;
@@ -150,8 +163,9 @@ main {
       }
 
       .list-content{
-        flex: 4;
+        flex: 1;
         padding-right: 2rem;
+
       }
 
       .list-description{

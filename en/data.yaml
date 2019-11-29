@@ -1,64 +1,55 @@
 name: Krzysztof Atłasik
 birthdate: 04.02.1988
-title: Programista fullstack
+title: Fullstack developer
 hobby: >
-        Lubię aktywnie spedzać czas podczas jazdy na rowerze, biegania,
-        wędrówek po górach czy wpinaczki. Gdy mam chwilę by spotkać się ze
-        znajomymi chętnię gram w gry planszowe.
+        I like cycling, running and mountaineering. I'm board games enthusiast.
 abilities:
        - category: Java
          skills:
          - name: Java
-           level: 3
+           level: 7
          - name: Spring Framework
-           level: 2
-         - name: Hibernate
-           level: 2
+           level: 6
        - category: Scala
          skills:
          - name: Scala
-           level: 2
-           loved: true
-         - name: Lightbend techs (Play, Akka, Lagom, Slick)
-           level: 2
-           loved: true
-         - name: Typelevel techs (cats, shapeless)
-           level: 1
-           loved: true
-       - category: Inne technologie JVM
+           level: 6
+         - name: Play Framework
+           level: 6
+         - name: Akka
+           level: 4
+         - name: Cats
+           level: 3
+         - name: Slick
+           level: 5
+       - category: Other
          skills:
          - name: Groovy
-           level: 1
+           level: 4
          - name: Kotlin
-           level: 1
-           loved: true
-       - category: Inne technologie
-         skills:
+           level: 4
          - name: Python
-           level: 1
+           level: 3
          - name: Haskell
-           level: 1
-           loved: true
-         - name: CSS i HTML
-           level: 2
+           level: 4
+       - category: Frontend
+         skills:
+         - name: CSS & HTML
+           level: 6
          - name: JavaScript
-           level: 2
-       - category: Bazy danych
+           level: 6
+       - category: RDBMS
          skills:
          - name: Postgres
-           level: 2
-           loved: true
+           level: 5
          - name: MySQL
-           level: 2
-         - name: Oracle
-           level: 1
-       - category: Dev Ops
+           level: 4
+       - category: DevOps
          skills:
          - name: AWS
-           level: 2
+           level: 5
          - name: Kubernetes
-           level: 1
-           loved: true
+           level: 4
 
 contact:
   phone: +48 514 877 107
@@ -70,13 +61,13 @@ education:
  - period:
      from: 01.9.2005
      to: 01.06.2007
-   school: VII Liceum Ogólnokształcące im. Mikołaja Kopernika w Częstochowie
+   school: VII Liceum Ogólnokształcące im. Mikołaja Kopernika in Częstochowa
  - period:
      from: 01.9.2007
      to: 01.02.2010
-   school: Politechnika Śląska w Gliwicach
+   school: Silesian University of Technology
    description: >
-                 Studia na kierunku Elektronika i Telekomunikacja
+                 Electronics and Telecommunication
 
 experience:
  - period:
@@ -91,6 +82,7 @@ experience:
    position: Fullstack developer Java/Javascript
  - period:
      from: 02.01.2018
+     to: 31.02.2019
    company: Mestudent.com
    position: Fullstack developer Scala/Typescript
  - period:
@@ -99,7 +91,7 @@ experience:
    company: Sii Polska
    position: Spark developer
 language:
-  - name: angielski
+  - name: English
     description: C1
-  - name: niemiecki
+  - name: German
     description: B1

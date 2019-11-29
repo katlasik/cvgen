@@ -39,10 +39,10 @@ Handlebars.registerHelper('times', function(n, block) {
     })
 })
 
-Handlebars.registerHelper('rating', function(n) {
+Handlebars.registerHelper('rating', function(n, loved) {
     return range(conf.maximum_rating).map(i =>
       (i < n) ? "<i class='fa fa-star'></i>" : "<i class='fa fa-star-o'></i>"
-    ).join(" ")
+    ).join(" ") + (loved === true ? "&nbsp;&nbsp;<i class='fa fa-heart'></i>" : "")
 })
 
 Handlebars.registerPartial('sidebar', sidebar)
