@@ -51,20 +51,24 @@
             <div class="item-value"><a href="mailto:{{data.contact.mail}}">{{data.contact.mail}}</a></div>
         </div>
         </div>
+        {{# if data.contact.skype}}
         <div class="item">
-        <div class="item-icon"><i class="fa fa-skype"></i></div>
-        <div>
-            <div class="item-title">{{messages.skype}}</div>
-            <div class="item-value"><a href="skype:{{data.contact.skype}}">{{data.contact.skype}}</a></div>
+            <div class="item-icon"><i class="fa fa-skype"></i></div>
+            <div>
+                <div class="item-title">{{messages.skype}}</div>
+                <div class="item-value"><a href="skype:{{data.contact.skype}}">{{data.contact.skype}}</a></div>
+            </div>
         </div>
-        </div>
+        {{/if}}
+        {{# if data.contact.linkedin}}
         <div class="item">
-        <div class="item-icon"><i class="fa fa-linkedin"></i></div>
-        <div>
-            <div class="item-title">{{messages.linkedin}}</div>
-            <div class="item-value"><a href="{{data.contact.linkedin}}">{{data.contact.linkedin}}</a></div>
+            <div class="item-icon"><i class="fa fa-linkedin"></i></div>
+            <div>
+                <div class="item-title">{{messages.linkedin}}</div>
+                <div class="item-value"><a href="{{data.contact.linkedin}}">{{data.contact.linkedin}}</a></div>
+            </div>
         </div>
-        </div>
+        {{/if}}
     </div>
     </div>
 </div>

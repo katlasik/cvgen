@@ -14,7 +14,7 @@
 
       <article class="section">
         <h3 class="section-title">{{messages.experience}}</h3>
-        <hr></hr>
+        <hr/>
         <div class="list">
           {{#each data.experience}}
           <div class="list-item">
@@ -57,15 +57,6 @@
         </div>
       </article>
 
-      <div class="spacer"></div>
-
-      <article class="section">
-        <h3 class="section-title">{{messages.hobby}}</h3>
-        <hr></hr>
-        <div class="list">
-          <div class="list-item">{{data.hobby}}</div>
-        </div>
-      </article>
 
       <footer>{{messages.agreement}}</footer>
     </div>
@@ -76,31 +67,30 @@
   <div class="container">
   {{>sidebar show_mugshot=false}}
    <div class="content">
-     <div class="spacer"></div>
-     <article class="section">
-        <h3 class="section-title">{{messages.skills}}</h3>
-        <hr></hr>
-        <div class="list">
-            {{#each data.abilities}}
-               <h4 class="list-heading">{{this.category}}</h4>
-               {{#each this.skills}}
+       <div class="spacer"></div>
+
+       <article class="section">
+           <h3 class="section-title">{{messages.courses}}</h3>
+           <hr></hr>
+           <div class="list">
+               {{#each data.course}}
                <div class="list-item">
-                 <div class="list-title">{{this.name}}</div>
-                 <div class="list-content">
-                    <div class="list-rating">
-                       {{#rating this.level}}{{/rating}}
-                     </div>
-                    <div class="list-subtitle">{{this.description}}</div>
-                 </div>
+                   <div class="list-title">
+                       <div>{{#formatDateShort this.period.from}}{{/formatDateShort}}</div>
+                       {{#if this.period.to}}
+                       <div>{{#formatDateShort this.period.to}}{{/formatDateShort}}</div>
+                       {{/if}}
+                   </div>
+                   <div class="list-content">
+                       <div class="list-description">{{this.description}}</div>
+                       <div class="list-subtitle">{{this.organizer}}</div>
+                   </div>
                </div>
                {{/each}}
-            {{/each}}
-        </div>
-      </article>
-
-      <div class="spacer"></div>
-
-      <article class="section">
+           </div>
+       </article>
+       <div class="spacer"></div>
+       <article class="section">
         <h3 class="section-title">{{messages.languages}}</h3>
         <hr></hr>
         <div class="list">
@@ -114,7 +104,15 @@
           {{/each}}
         </div>
       </article>
-
+       <div class="spacer"></div>
+       <article class="section">
+          <h3 class="section-title">{{messages.hobby}}</h3>
+          <hr></hr>
+          <div class="list">
+              <div class="list-item">{{data.hobby}}</div>
+          </div>
+      </article>
+      <div class="spacer"></div>
       <footer>{{messages.agreement}}</footer>
    </div>
   </div>

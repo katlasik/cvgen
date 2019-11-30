@@ -1,92 +1,87 @@
-name: Krzysztof Atłasik
-birthdate: 04.02.1988
-title: Programista fullstack
+name: Anna Atłasik
+birthdate: 13.06.1985
 hobby: >
         Lubię aktywnie spedzać czas podczas jazdy na rowerze, biegania,
-        wędrówek po górach czy wpinaczki. Gdy mam chwilę by spotkać się ze
-        znajomymi chętnię gram w gry planszowe.
-abilities: 
-       - category: Java
-         skills:
-         - name: Java 
-           level: 7
-         - name: Spring Framework
-           level: 6
-       - category: Scala
-         skills:
-         - name: Scala
-           level: 6
-         - name: Play Framework
-           level: 6
-         - name: Akka
-           level: 4
-         - name: Cats
-           level: 3
-         - name: Slick
-           level: 5
-       - category: Inne języki
-         skills:
-         - name: Groovy
-           level: 4
-         - name: Kotlin
-           level: 4
-         - name: Python
-           level: 3
-         - name: Haskell
-           level: 4
-       - category: Frontend
-         skills: 
-         - name: CSS i HTML
-           level: 6
-         - name: JavaScript
-           level: 6
-       - category: RDBMS
-         skills:
-         - name: Postgres
-           level: 5
-         - name: MySQL
-           level: 4
-       - category: DevOps
-         skills:
-         - name: AWS
-           level: 5
-         - name: Kubernetes
-           level: 4
-       
+        wędrówek po górach czy wspinaczki.
 contact:
-  phone: +48 514 877 107
-  skype: krzysztof_atlasik
-  mail: krzysztof.atlasik@protonmail.com
-  linkedin: http://bit.do/eHX9j
+  phone: 504 026 596
+  mail: atlasik.anna@gmail.com
 education:
  - period:
-     from: 01.9.2005
-     to: 01.06.2007
-   school: VII Liceum Ogólnokształcące im. Mikołaja Kopernika w Częstochowie
+     from: 01.07.2014
+     to: 01.03.2016
+   school: Studium Terapii Uzależnień w Broku
+   description: Dodatkowo dwutygodniowy staż w Ośrodku Terapii Uzależnień w Starych Juchach i 70 godzin superwizji
  - period:
-     from: 01.9.2007
-     to: 01.02.2010
-   school: Politechnika Śląska w Gliwicach
-   description: >
-                 Studia na kierunku Elektronika i Telekomunikacja
-
+     from: 01.09.2013
+     to: 01.06.2015
+   school: Uniwersytet Śląskie w Katowicach
+   description: Studia uzupełniające magisterskie - Socjologia i komunikacja społeczna
+ - period:
+     from: 01.09.2009
+     to: 01.06.2010
+   school: Wyższa Szkoła Umiejętności Społecznych w Poznaniu
+   description:  Studia podyplomowe - Mediacje i negocjacje
+ - period:
+     from: 01.09.2007
+     to: 01.06.2009
+   school: Wyższa Szkoła Umiejętności Społecznych w Poznaniu
+   description: Studia uzupełniające magisterskie - Dziennikarstwo i komunikacja społeczna
+ - period:
+     from: 01.09.2004
+     to: 01.06.2007
+   school: Wyższa Szkoła Umiejętności Społecznych w Poznaniu
+   description: Studia licencjackie - Dziennikarstwo i komunikacja społeczna
 experience:
  - period:
-     from: 01.09.2011
-     to: 30.06.2016
-   company: ISO Software Polska
-   position: Fullstack developer Java/Javascript
+     from: 01.10.2018
+   company: Stowarzyszenie eMOCja
  - period:
-     from: 01.07.2016
-     to: 31.12.2017
-   company: Intive Polska
-   position: Fullstack developer Java/Javascript
+     from: 01.01.2017
+   company: Stowarzyszenie Terapeutów „Trzeźwe Siemianowice”
  - period:
-     from: 02.01.2018
-   company: Mestudent.com
-   position: Fullstack developer Scala/Typescript
+     from: 01.03.2016
+   company: Samodzielny Publiczny Zakład Terapii Uzależnień i Współuzależnienia w Siemianowicach Śląskich
+   position: p.o. specjalista terapii uzależnień
+   description: >
+      Zakres obowiązków:
+      • Prowadzenie grup terapeutycznych o różnym charakterze
+      • Prowadzenie sesji indywidualnych
+      • Kontrola nad dynamiką grupy, uruchamianie jej potencjału leczniczego, utrzymywanie stałej motywacji do leczenia, uczenie pacjentów asertywności, radzenia sobie z emocjami oraz empatii
+      • Terapeutyczne oddziaływanie na zmianę postaw życiowych i nabywanie umiejętności społecznych
+      • Korygowanie zaburzeń funkcjonalnych
+      • Pomoc osobom przeżywającym niepewność i lęk
+ - period:
+     from: 01.01.2015
+     to: 01.12.2016
+   company: CUK Ubezpieczenia – Oddział Katowice
+   position: specjalista ds. ubezpieczeń
+ - period:
+     from: 01.02.2011
+     to: 01.07.2014
+   company: Restauracja „Kamienny Kasztel” w Chorzowie
+   position: manager
 language:
-  - name: angielski
-    description: C1
-  - name: niemiecki
-    description: B1
+ - name: angielski
+   description: B2
+course:
+ - period:
+     from: 01.06.2016
+   description: Szkolenie „Stawka większa niż życie - Dialog Motywujący w pracy terapeutycznej z osobami uzależnionymi behawioralnie”.
+   organizer: "Organizator: Błękitny Krzyż w Polsce"
+ - period:
+     from: 01.02.2014
+   description: Szkolenie „Stawka większa niż życie – program szkoleniowy dla terapeutów uzależnień”.
+   organizer: "Organizator: Błękitny Krzyż w Polsce"
+ - period:
+     from: 01.01.2013
+     to: 01.06.2013
+   description: Szkolenie NVC „Porozumienie bez przemocy”. Współrealizowanie projektu ze środków Unii Europejskiej – Młodzież w działaniu.
+   organizer: "Organizator: Stowarzyszenie Aktywnych Kobiet w Sosnowcu."
+ - period:
+     from: 01.02.2013
+   description: "Warsztaty: Emisja Głosu i jego ekspresja."
+   organizer: "Organizator: Metrum - Warsztaty i Doradztwo."
+ - period:
+     from: 01.07.2008
+   description: Tygodniowy kurs umiejętności interpersonalnych w Bucharzewie.
