@@ -19,26 +19,29 @@ abilities:
          - name: Scala
            level: 2
            loved: true
-         - name: Lightbend techs (Play, Akka, Lagom, Slick)
+         - name: Lightbend Scala (Play, Akka, Lagom, Slick)
            level: 2
            loved: true
-         - name: Typelevel techs (cats, shapeless)
+         - name: Typelevel Scala (cats, shapeless)
            level: 1
            loved: true
-       - category: Inne technologie JVM
+         - name: Spark
+           level: 2
+           loved: true
+       - category: Inne technologie
          skills:
          - name: Groovy
            level: 1
          - name: Kotlin
            level: 1
            loved: true
-       - category: Inne technologie
-         skills:
          - name: Python
            level: 1
          - name: Haskell
            level: 1
            loved: true
+       - category: Frontend
+         skills:
          - name: CSS i HTML
            level: 2
          - name: JavaScript
@@ -91,11 +94,11 @@ experience:
    position: Fullstack developer Java/Javascript
  - period:
      from: 02.01.2018
+     to: 28.02.2019
    company: Mestudent.com
    position: Fullstack developer Scala/Typescript
  - period:
-     from: 02.01.2018
-     to: 31.02.2019
+     from: 01.03.2018
    company: Sii Polska
    position: Spark developer
 language:
