@@ -25,7 +25,7 @@
     "image-webpack-loader": "^3.3.0",
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.13.1",
     "on-build-webpack": "^0.1.0",
     "phantom-html2pdf": "^4.0.0",
     "phantomjs": "^2.1.7",
