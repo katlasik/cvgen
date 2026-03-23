@@ -1,74 +1,15 @@
 name: Krzysztof Atłasik
 birthdate: 04.02.1988
-title: Programista fullstack
+title: Programista
 hobby: >
         Lubię aktywnie spedzać czas podczas jazdy na rowerze, biegania,
         wędrówek po górach czy wpinaczki. Gdy mam chwilę by spotkać się ze
         znajomymi chętnię gram w gry planszowe.
-abilities:
-       - category: Java
-         skills:
-         - name: Java
-           level: 3
-         - name: Spring Framework
-           level: 2
-         - name: Hibernate
-           level: 2
-       - category: Scala
-         skills:
-         - name: Scala
-           level: 2
-           loved: true
-         - name: Lightbend Scala (Play, Akka, Lagom, Slick)
-           level: 2
-           loved: true
-         - name: Typelevel Scala (cats, shapeless)
-           level: 1
-           loved: true
-         - name: Spark
-           level: 2
-           loved: true
-       - category: Inne technologie
-         skills:
-         - name: Groovy
-           level: 1
-         - name: Kotlin
-           level: 1
-           loved: true
-         - name: Python
-           level: 1
-         - name: Haskell
-           level: 1
-           loved: true
-       - category: Frontend
-         skills:
-         - name: CSS i HTML
-           level: 2
-         - name: JavaScript
-           level: 2
-       - category: Bazy danych
-         skills:
-         - name: Postgres
-           level: 2
-           loved: true
-         - name: MySQL
-           level: 2
-         - name: Oracle
-           level: 1
-       - category: Dev Ops
-         skills:
-         - name: AWS
-           level: 2
-         - name: Kubernetes
-           level: 1
-           loved: true
 
 contact:
   phone: +48 514 877 107
-  skype: krzysztof_atlasik
   mail: krzysztof.atlasik@protonmail.com
-  linkedin: http://bit.do/eHX9j
-  stackoverflow: http://bit.do/fitFx
+  linkedin: www.linkedin.com/in/krzysztof-atlasik
 education:
  - period:
      from: 01.9.2005
@@ -76,7 +17,7 @@ education:
    school: VII Liceum Ogólnokształcące im. Mikołaja Kopernika w Częstochowie
  - period:
      from: 01.9.2007
-     to: 01.02.2010
+     to: 01.06.2012
    school: Politechnika Śląska w Gliwicach
    description: >
                  Studia na kierunku Elektronika i Telekomunikacja
@@ -86,21 +27,39 @@ experience:
      from: 01.09.2011
      to: 30.06.2016
    company: ISO Software Polska
-   position: Fullstack developer Java/Javascript
+   position: Programista
  - period:
      from: 01.07.2016
      to: 31.12.2017
    company: Intive Polska
-   position: Fullstack developer Java/Javascript
+   position: Programista
  - period:
      from: 02.01.2018
      to: 28.02.2019
    company: Mestudent.com
-   position: Fullstack developer Scala/Typescript
+   position: Programista
  - period:
      from: 01.03.2018
    company: Sii Polska
-   position: Spark developer
+   position: Lider Zespołu
+ - period:
+     from: 01.03.2018
+     to: 28.02.2022
+   company: Software Development Academy
+   position: Trener
+ - period:
+     from: 01.03.2020
+     to: 01.03.2023
+   company: SoftwareMill
+   position: Lider Zespołu
+ - period:
+     from: 01.10.2022
+   company: NobleProd
+   position: Trener
+ - period:
+     from: 01.03.2023
+   company: SoftwareMill
+   position: Staff Engineer
 language:
   - name: angielski
     description: C1

@@ -89,72 +89,72 @@
     </div>
 </div>
 
-<div class="page">
-    <div class="container">
-        {{>sidebar show_mugshot=false}}
-        <div class="content">
-            <div class="spacer"></div>
-            <article class="section">
-                <h3 class="section-title">{{messages.skills}}</h3>
-                <hr>
-                <div class="list">
-                    {{#each data.abilities}}
-                    <h4 class="list-heading">{{this.category}}</h4>
-                    {{#each this.skills}}
-                    <div class="list-item">
-                        <div class="list-title">{{this.name}}</div>
-                        <div class="list-content">
-                            <div class="list-rating">
-                                {{#rating this.level this.loved}}{{/rating}}
-                            </div>
-                            <div class="list-subtitle">{{this.description}}</div>
-                        </div>
-                    </div>
-                    {{/each}}
-                    {{/each}}
-                </div>
-            </article>
+<!--<div class="page">-->
+<!--    <div class="container">-->
+<!--        {{>sidebar show_mugshot=false}}-->
+<!--        <div class="content">-->
+<!--            <div class="spacer"></div>-->
+<!--            <article class="section">-->
+<!--                <h3 class="section-title">{{messages.skills}}</h3>-->
+<!--                <hr>-->
+<!--                <div class="list">-->
+<!--                    {{#each data.abilities}}-->
+<!--                    <h4 class="list-heading">{{this.category}}</h4>-->
+<!--                    {{#each this.skills}}-->
+<!--                    <div class="list-item">-->
+<!--                        <div class="list-title">{{this.name}}</div>-->
+<!--                        <div class="list-content">-->
+<!--                            <div class="list-rating">-->
+<!--                                {{#rating this.level this.loved}}{{/rating}}-->
+<!--                            </div>-->
+<!--                            <div class="list-subtitle">{{this.description}}</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    {{/each}}-->
+<!--                    {{/each}}-->
+<!--                </div>-->
+<!--            </article>-->
 
-            <article class="section">
-                <div class="list">
-                    <h4 class="list-heading">{{messages.legend}}</h4>
-                    <div class="list-item reversed">
-                        <div class="list-content">
-                            <div class="list-rating">
-                                {{#rating 3}}{{/rating}}
-                            </div>
-                        </div>
-                        <div class="list-title">{{messages.level3}}</div>
-                    </div>
-                    <div class="list-item reversed">
-                        <div class="list-content">
-                            <div class="list-rating">
-                                {{#rating 2}}{{/rating}}
-                            </div>
-                        </div>
-                        <div class="list-title">{{messages.level2}}</div>
-                    </div>
-                    <div class="list-item reversed">
-                        <div class="list-content">
-                            <div class="list-rating">
-                                {{#rating 1}}{{/rating}}
-                            </div>
-                        </div>
-                        <div class="list-title">{{messages.level1}}</div>
-                    </div>
-                    <div class="list-item reversed">
-                        <div class="list-content">
-                            <div class="list-rating">
-                                <i class='fa fa-heart'></i>
-                            </div>
-                        </div>
-                        <div class="list-title">{{messages.loved}}</div>
-                    </div>
-                </div>
+<!--            <article class="section">-->
+<!--                <div class="list">-->
+<!--                    <h4 class="list-heading">{{messages.legend}}</h4>-->
+<!--                    <div class="list-item reversed">-->
+<!--                        <div class="list-content">-->
+<!--                            <div class="list-rating">-->
+<!--                                {{#rating 3}}{{/rating}}-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="list-title">{{messages.level3}}</div>-->
+<!--                    </div>-->
+<!--                    <div class="list-item reversed">-->
+<!--                        <div class="list-content">-->
+<!--                            <div class="list-rating">-->
+<!--                                {{#rating 2}}{{/rating}}-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="list-title">{{messages.level2}}</div>-->
+<!--                    </div>-->
+<!--                    <div class="list-item reversed">-->
+<!--                        <div class="list-content">-->
+<!--                            <div class="list-rating">-->
+<!--                                {{#rating 1}}{{/rating}}-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="list-title">{{messages.level1}}</div>-->
+<!--                    </div>-->
+<!--                    <div class="list-item reversed">-->
+<!--                        <div class="list-content">-->
+<!--                            <div class="list-rating">-->
+<!--                                <i class='fa fa-heart'></i>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="list-title">{{messages.loved}}</div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-            </article>
+<!--            </article>-->
 
-            <footer>{{messages.agreement}}</footer>
-        </div>
-    </div>
-</div>
+<!--            <footer>{{messages.agreement}}</footer>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

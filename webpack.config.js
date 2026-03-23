@@ -1,60 +1,30 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
-const WebpackOnBuildPlugin = require('on-build-webpack')
-const pdf = require('phantom-html2pdf');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const isProd = process.env.NODE_ENV === 'production';
 
-const isProd = process.argv.indexOf('-p') !== -1;
-
-const sassProd = {
-  test: /\.scss$/,
-  loader: ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: 'css-loader!sass-loader'
-  })
-}
-
-const sassDev =   {
-  test: /\.scss$/,
-  loaders: [
-    'style-loader',
-    'css-loader',
-    'sass-loader'
-  ]
-}
+const sassRule = isProd
+  ? {
+      test: /\.scss$/,
+      use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+    }
+  : {
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader']
+    }
 
 const plugins = [
-    new HtmlWebpackPlugin({
-   	title: "Resume"
-    }),
-    new ExtractTextPlugin("css/[name].css")
+  new HtmlWebpackPlugin({
+    title: "Resume"
+  }),
+  new MiniCssExtractPlugin({
+    filename: "css/[name].css"
+  })
 ]
 
-if (isProd) {
-    plugins.push(new PrerenderSpaPlugin(
-      path.resolve(__dirname, 'static'),
-      ['/'],
-      { captureAfterTime: 5000 }
-    ))
-
-
-     plugins.push(new WebpackOnBuildPlugin(function() {
-        const options = {
-   	   html: "static/index.html"
-     }
-
-	pdf.convert(options, function(err, result) {
-           result.toFile("pdf/cv.pdf", function() {})
-	})
-    }))
-	
-} 
-
-const sassLoader = isProd ? sassProd : sassDev
-
 module.exports = {
+  mode: isProd ? 'production' : 'development',
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, "static"),
@@ -73,51 +43,54 @@ module.exports = {
     }
   },
   plugins: plugins,
-  node: {
-    fs: "empty"
-  },
   module: {
-    loaders: [
-     {
+    rules: [
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
+        options: {
+          presets: ['@babel/preset-env']
         }
       },
       {
         test: /\.yaml$/,
-        loaders: [
-          'json-loader',
-          'yaml-loader'
-        ]
+        use: ['yaml-loader']
       },
       {
         test: /\.html$/,
-        loaders: ['handlebars-template-loader']
+        use: [{
+          loader: 'handlebars-loader',
+          options: {
+            ignorePartials: true,
+            precompileOptions: {
+              knownHelpersOnly: false
+            }
+          }
+        }]
       },
       {
         test: /\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
-      sassLoader,
+      sassRule,
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file-loader?name=fonts/[name].[ext]"
-     },{
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
+      },
+      {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url-loader"
-      },{
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        loaders: [
-          'file-loader?hash=sha512&digest=hex&name=images/[hash].[ext]',
-          'image-webpack-loader?bypassOnDebug=true&quality=100'
-        ]
+        type: 'asset/inline'
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext]'
+        }
       }
     ]
   }

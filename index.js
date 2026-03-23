@@ -3,7 +3,7 @@ import template from '@/template.html'
 import sidebar from '@/sidebar.html'
 
 import main from '@/styles/main.scss'
-import fontAwesome from "font-awesome-webpack"
+import "font-awesome/css/font-awesome.css"
 import mugshot from "@/images/mugshot.jpg"
 
 import openSans from "@/fonts/OpenSans-Regular.ttf"
@@ -16,8 +16,8 @@ import { range } from "lodash"
 
 const locale = getParameter("lang") || "pl"
 
-const data = require(`@/${locale}/data.yaml`)
-const messages = require(`@/${locale}/messages.yaml`)
+const data = require(`@/${locale}/data.yaml`).default
+const messages = require(`@/${locale}/messages.yaml`).default
 
 moment.locale(locale)
 
